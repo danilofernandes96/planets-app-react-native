@@ -13,7 +13,6 @@ const Home: React.FC = () => {
       .get('/planets')
       .then(response => {
         setPlanet(response.data);
-        console.log(response.data[0]);
       })
       .catch(e => console.log(e));
   }, []);
