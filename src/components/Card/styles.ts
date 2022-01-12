@@ -29,3 +29,23 @@ export const ImageCard = styled(Image).attrs({
 export const ViewText = styled.View`
   flex: 1;
 `;
+
+export const TitleText = styled.Text`
+  font-size: 28px;
+  font-weight: bold;
+  color: #FFF;
+  text-align: center;
+`;
+
+export const InfoView = styled.View`
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+`;
+
+export const InfoText = styled.Text`
+  font-size: 16px;
+  color: #FFF;
+`;
