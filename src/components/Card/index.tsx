@@ -8,20 +8,15 @@ import {
   TitleText,
   ViewText,
 } from './styles';
-import {ICard} from './types';
+import {IPlanet} from './types';
 
-const Card: React.FC<ICard> = ({
-  imagePlanet,
-  titlePlanet,
-  temperature,
-  size,
-}) => {
+const Card: React.FC<IPlanet> = ({name, image, temperature, size}) => {
   return (
     <CenteredView>
       <CardView>
-        <ImageCard uri={imagePlanet} />
+        <ImageCard uri={image} />
         <ViewText>
-          <TitleText>{titlePlanet}</TitleText>
+          <TitleText>{name}</TitleText>
           <InfoView>
             <InfoText>{temperature}</InfoText>
             <InfoText>{size}</InfoText>
