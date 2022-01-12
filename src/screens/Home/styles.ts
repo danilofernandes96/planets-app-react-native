@@ -13,5 +13,5 @@ export const Image = styled(ImageBackground).attrs({
 })`
   flex-grow: 1;
   justify-content: center;
-  padding-top: 100px;
+  padding-top: 50px;
 `;
