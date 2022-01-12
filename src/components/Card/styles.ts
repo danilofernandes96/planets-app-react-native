@@ -1,4 +1,5 @@
 import { Image } from 'react-native';
+import { SvgUri } from 'react-native-svg';
 import styled from 'styled-components/native';
 
 export const CenteredView = styled.View`
@@ -17,11 +18,10 @@ export const CardView = styled.View`
   min-height: 150px;
 `;
 
-export const ImageCard = styled(Image).attrs({
-  source: require('../../../assets/images/universe-background.png'),
+export const ImageCard = styled(SvgUri).attrs({
+  width: '40%',
+  height: '100%',
 })`
-  width: 40%;
-  height: 100%;
   object-fit: contain;
   margin-right: 15px;
 `;
