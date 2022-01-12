@@ -1,12 +1,26 @@
 import React from 'react';
-import {CardView, CenteredView, ImageCard, ViewText} from './styles';
+import {
+  CardView,
+  CenteredView,
+  ImageCard,
+  InfoText,
+  InfoView,
+  TitleText,
+  ViewText,
+} from './styles';
 
 const Card: React.FC = () => {
   return (
     <CenteredView>
       <CardView>
         <ImageCard />
-        <ViewText />
+        <ViewText>
+          <TitleText>Marte</TitleText>
+          <InfoView>
+            <InfoText>°C: 450</InfoText>
+            <InfoText>450</InfoText>
+          </InfoView>
+        </ViewText>
       </CardView>
     </CenteredView>
   );
