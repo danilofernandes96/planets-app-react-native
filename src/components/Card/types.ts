@@ -1,7 +1,7 @@
-export interface ICard {
+export interface IPlanet {
   id: string,
-  imagePlanet: string,
-  titlePlanet: string,
+  name: string,
+  image: string,
   temperature: string,
   size: string,
 }
