@@ -15,3 +15,7 @@ export const Image = styled(ImageBackground).attrs({
   justify-content: center;
   padding-top: 50px;
 `;
+
+export const TouchablePlanet = styled.TouchableOpacity`
+  flex: 1;
+`;
