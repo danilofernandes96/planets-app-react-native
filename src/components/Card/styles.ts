@@ -14,11 +14,11 @@ export const CardView = styled.View`
   border-radius: 15px;
   padding: 15px;
   width: auto;
-  min-height: 150px;
+  min-height: 130px;
 `;
 
 export const ImageCard = styled(SvgUri).attrs({
-  width: '40%',
+  width: '30%',
   height: 'auto',
 })`
   object-fit: contain;
@@ -33,7 +33,6 @@ export const TitleText = styled.Text`
   font-size: 28px;
   font-weight: bold;
   color: #FFF;
-  text-align: center;
 `;
 
 export const InfoView = styled.View`
@@ -41,10 +40,18 @@ export const InfoView = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+
 `;
 
 export const InfoText = styled.Text`
   font-size: 16px;
   color: #FFF;
+  justify-content: flex-start;
+  padding-left: 5px;
+`;
+
+export const LineBlue = styled.View`
+  border-width: 0.5px;
+  border-color: #3DACDF;
+  margin-top: 10px;
 `;
