@@ -3,7 +3,7 @@ import {FlatList, StyleSheet} from 'react-native';
 import Card from '../../components/Card';
 import {IPlanet} from '../../components/Card/types';
 import api from '../../services/api';
-import {Container, Image} from './styles';
+import {Container, Image, TouchablePlanet} from './styles';
 
 const Home: React.FC = () => {
   const [planet, setPlanet] = useState<IPlanet[]>([]);
@@ -24,13 +24,16 @@ const Home: React.FC = () => {
           style={styles.flatlistContainer}
           data={planet}
           renderItem={({item}) => (
-            <Card
-              id={item.id}
-              name={item.name}
-              image={item.image}
-              size={item.size}
-              temperature={item.temperature}
-            />
+            <TouchablePlanet
+              onPress={() => console.log('Planeta ' + item.name)}>
+              <Card
+                id={item.id}
+                name={item.name}
+                image={item.image}
+                size={item.size}
+                temperature={item.temperature}
+              />
+            </TouchablePlanet>
           )}
           keyExtractor={item => item.id}
           showsVerticalScrollIndicator={false}
