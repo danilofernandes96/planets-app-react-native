@@ -1,11 +1,13 @@
+import {useNavigation} from '@react-navigation/native';
 import React, {useEffect, useState} from 'react';
 import {FlatList, StyleSheet} from 'react-native';
 import Card from '../../components/Card';
 import {IPlanet} from '../../components/Card/types';
 import api from '../../services/api';
-import {Container, Image} from './styles';
+import {Container, Image, TouchablePlanet} from './styles';
 
 const Home: React.FC = () => {
+  const nav = useNavigation();
   const [planet, setPlanet] = useState<IPlanet[]>([]);
 
   useEffect(() => {
@@ -17,6 +19,13 @@ const Home: React.FC = () => {
       .catch(e => console.log(e));
   }, []);
 
+  const handle = (screen: any, title: any) => {
+    nav.navigate(screen);
+    nav.setOptions({
+      title: title,
+    });
+  };
+
   return (
     <Image source={require('../../../assets/images/universe-background.png')}>
       <Container>
@@ -24,13 +33,15 @@ const Home: React.FC = () => {
           style={styles.flatlistContainer}
           data={planet}
           renderItem={({item}) => (
-            <Card
-              id={item.id}
-              name={item.name}
-              image={item.image}
-              size={item.size}
-              temperature={item.temperature}
-            />
+            <TouchablePlanet onPress={() => handle('Details', item.name)}>
+              <Card
+                id={item.id}
+                name={item.name}
+                image={item.image}
+                size={item.size}
+                temperature={item.temperature}
+              />
+            </TouchablePlanet>
           )}
           keyExtractor={item => item.id}
           showsVerticalScrollIndicator={false}

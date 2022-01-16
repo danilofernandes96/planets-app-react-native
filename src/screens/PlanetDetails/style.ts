@@ -13,8 +13,5 @@ export const Image = styled(ImageBackground).attrs({
 })`
   flex-grow: 1;
   justify-content: center;
-`;
-
-export const TouchablePlanet = styled.TouchableOpacity`
-  flex: 1;
+  padding-top: 50px;
 `;
