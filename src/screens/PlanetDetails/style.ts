@@ -13,5 +13,17 @@ export const Image = styled(ImageBackground).attrs({
 })`
   flex-grow: 1;
   justify-content: center;
-  padding-top: 50px;
+`;
+
+export const Details = styled.View`
+  flex: 1;
+  background-color: #434071;
+  padding: 20px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+`;
+
+export const Title = styled.Text`
+  font-size: 30px;
+  color: #FFF;
 `;
