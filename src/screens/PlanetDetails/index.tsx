@@ -1,10 +1,13 @@
 import React from 'react';
+import {Text} from 'react-native';
 import {Container, Image} from './style';
 
 const PlanetDetails: React.FC = () => {
   return (
     <Image>
-      <Container>Hello</Container>
+      <Container>
+        <Text>Hello</Text>
+      </Container>
     </Image>
   );
 };
