@@ -1,4 +1,5 @@
 import React from 'react';
+import {LineBlue} from '../../global/styles';
 import {Container, Details, Image, Title} from './style';
 
 const PlanetDetails: React.FC = () => {
@@ -7,6 +8,7 @@ const PlanetDetails: React.FC = () => {
       <Container></Container>
       <Details>
         <Title>SOBRE</Title>
+        <LineBlue />
       </Details>
     </Image>
   );
