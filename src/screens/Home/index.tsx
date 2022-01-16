@@ -19,11 +19,8 @@ const Home: React.FC = () => {
       .catch(e => console.log(e));
   }, []);
 
-  const handle = (screen: any, title: any) => {
+  const handle = (screen: any) => {
     nav.navigate(screen);
-    nav.setOptions({
-      title: title,
-    });
   };
 
   return (
@@ -33,7 +30,7 @@ const Home: React.FC = () => {
           style={styles.flatlistContainer}
           data={planet}
           renderItem={({item}) => (
-            <TouchablePlanet onPress={() => handle('Details', item.name)}>
+            <TouchablePlanet onPress={() => handle('Details')}>
               <Card
                 id={item.id}
                 name={item.name}
