@@ -49,9 +49,3 @@ export const InfoText = styled.Text`
   justify-content: flex-start;
   padding-left: 5px;
 `;
-
-export const LineBlue = styled.View`
-  border-width: 0.5px;
-  border-color: #3DACDF;
-  margin-top: 10px;
-`;
