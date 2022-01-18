@@ -10,8 +10,8 @@ const MyTheme = {
   colors: {
     ...DefaultTheme.colors,
     primary: 'rgb(255, 255, 255)',
-    card: 'rgba(35, 11, 87, 0.8)',
-    background: 'rgba(35, 11, 87, 0.8)',
+    card: '#434071',
+    background: '#434071',
     text: '#FFF',
   },
 };
