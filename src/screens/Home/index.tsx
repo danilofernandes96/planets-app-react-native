@@ -37,6 +37,7 @@ const Home: React.FC = () => {
                 image={item.image}
                 size={item.size}
                 temperature={item.temperature}
+                curiosity={item.curiosity}
               />
             </TouchablePlanet>
           )}

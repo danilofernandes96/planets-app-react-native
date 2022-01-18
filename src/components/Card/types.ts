@@ -4,4 +4,5 @@ export interface IPlanet {
   image: string,
   temperature: string,
   size: string,
+  curiosity: string,
 }
