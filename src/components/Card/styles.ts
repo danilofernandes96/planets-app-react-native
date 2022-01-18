@@ -19,7 +19,7 @@ export const CardView = styled.View`
 
 export const ImageCard = styled(SvgUri).attrs({
   width: '30%',
-  height: 'auto',
+  height: '100%',
 })`
   object-fit: contain;
   margin-right: 15px;
