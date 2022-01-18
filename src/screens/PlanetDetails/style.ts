@@ -16,7 +16,7 @@ export const Image = styled(ImageBackground).attrs({
 `;
 
 export const Details = styled.View`
-  flex: 1;
+  flex: 0.5;
   background-color: #434071;
   padding: 20px;
   border-top-left-radius: 30px;
@@ -26,4 +26,11 @@ export const Details = styled.View`
 export const Title = styled.Text`
   font-size: 30px;
   color: #FFF;
+`;
+
+export const TextBox = styled.Text`
+  font-size: 16px;
+  color: #FFF;
+  margin-top: 10px;
+  text-align: justify;
 `;
