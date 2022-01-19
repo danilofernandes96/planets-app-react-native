@@ -5,6 +5,9 @@ export interface IPlanet {
   temperature: string,
   size: string,
   curiosity: string,
+  distance_sun: string,
+  duration_day: string,
+  orbital_period: string,
 }
 
 export interface IPlanetId {
