@@ -9,4 +9,5 @@ export interface IPlanet {
 
 export interface IPlanetId {
   id: string,
+  name: string,
 }
