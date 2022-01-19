@@ -6,7 +6,8 @@ import {
   Image,
   ImagePlanet,
   LottiePlanet,
-  TextBox,
+  SubTitle,
+  TextRegular,
   Title,
   ViewPlanetLoad,
 } from './style';
@@ -56,7 +57,16 @@ const PlanetDetails: React.FC = () => {
       <Details>
         <Title>CURIOSIDADES</Title>
         <LineBlue />
-        <TextBox>{data?.curiosity}</TextBox>
+        <TextRegular>{data?.curiosity}</TextRegular>
+        <SubTitle>Distância do Sol:</SubTitle>
+        <LineBlue />
+        <TextRegular>{data?.distance_sun}</TextRegular>
+        <SubTitle>Duração do dia:</SubTitle>
+        <LineBlue />
+        <TextRegular>{data?.duration_day}</TextRegular>
+        <SubTitle>Período orbital:</SubTitle>
+        <LineBlue />
+        <TextRegular>{data?.orbital_period}</TextRegular>
       </Details>
     </Image>
   );

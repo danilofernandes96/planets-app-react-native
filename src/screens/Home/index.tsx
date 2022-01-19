@@ -47,6 +47,9 @@ const Home: React.FC = () => {
                 size={item.size}
                 temperature={item.temperature}
                 curiosity={item.curiosity}
+                distance_sun={item.distance_sun}
+                duration_day={item.duration_day}
+                orbital_period={item.orbital_period}
               />
             </TouchablePlanet>
           )}
