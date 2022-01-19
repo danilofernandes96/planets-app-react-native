@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {LineBlue} from '../../global/styles';
-import {Container, Details, Image, TextBox, Title} from './style';
+import {Container, Details, Image, ImagePlanet, TextBox, Title} from './style';
 import {IPlanet} from '../../store/modules/PlanetStore/Types';
 import {IRootStore} from '../../store';
 import {useSelector} from 'react-redux';
@@ -17,11 +17,15 @@ const PlanetDetails: React.FC = () => {
       .catch(e => console.log(e));
   }, [id]);
 
+  const image: any = data?.image;
+
   return (
     <Image>
-      <Container></Container>
+      <Container>
+        <ImagePlanet uri={image} />
+      </Container>
       <Details>
-        <Title>CURIOSIDADE</Title>
+        <Title>CURIOSIDADES</Title>
         <LineBlue />
         <TextBox>{data?.curiosity}</TextBox>
       </Details>
