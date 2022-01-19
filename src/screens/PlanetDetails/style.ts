@@ -1,4 +1,5 @@
 import { ImageBackground } from 'react-native';
+import { SvgUri } from 'react-native-svg';
 import styled from 'styled-components/native';
 
 export const Container = styled.SafeAreaView`
@@ -16,7 +17,7 @@ export const Image = styled(ImageBackground).attrs({
 `;
 
 export const Details = styled.View`
-  flex: 0.5;
+  flex: 1.8;
   background-color: #434071;
   padding: 20px;
   border-top-left-radius: 30px;
@@ -33,4 +34,13 @@ export const TextBox = styled.Text`
   color: #FFF;
   margin-top: 10px;
   text-align: justify;
+`;
+
+export const ImagePlanet = styled(SvgUri).attrs({
+  width: '50%',
+  height: '100%',
+})`
+  flex: 1;
+  justify-content: flex-end;
+  align-items: flex-end;
 `;
