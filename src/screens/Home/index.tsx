@@ -2,11 +2,14 @@ import {useNavigation} from '@react-navigation/native';
 import React, {useEffect, useState} from 'react';
 import {FlatList, StyleSheet} from 'react-native';
 import Card from '../../components/Card';
-import {IPlanet} from '../../components/Card/types';
+import {IPlanet, IPlanetId} from '../../store/modules/PlanetStore/Types';
 import api from '../../services/api';
 import {Container, Image, TouchablePlanet} from './styles';
+import {useDispatch} from 'react-redux';
+import {IdPlanet} from '../../store/modules/PlanetStore/Actions';
 
 const Home: React.FC = () => {
+  const dispatch = useDispatch();
   const nav = useNavigation();
   const [planet, setPlanet] = useState<IPlanet[]>([]);
 
@@ -19,7 +22,12 @@ const Home: React.FC = () => {
       .catch(e => console.log(e));
   }, []);
 
-  const handle = (screen: any) => {
+  const handle = (screen: any, val: string, valName: string) => {
+    const newId: IPlanetId = {
+      id: val,
+      name: valName,
+    };
+    dispatch(IdPlanet(newId));
     nav.navigate(screen);
   };
 
@@ -30,13 +38,18 @@ const Home: React.FC = () => {
           style={styles.flatlistContainer}
           data={planet}
           renderItem={({item}) => (
-            <TouchablePlanet onPress={() => handle('Details')}>
+            <TouchablePlanet
+              onPress={() => handle('Details', item.id, item.name)}>
               <Card
                 id={item.id}
                 name={item.name}
                 image={item.image}
                 size={item.size}
                 temperature={item.temperature}
+                curiosity={item.curiosity}
+                distance_sun={item.distance_sun}
+                duration_day={item.duration_day}
+                orbital_period={item.orbital_period}
               />
             </TouchablePlanet>
           )}

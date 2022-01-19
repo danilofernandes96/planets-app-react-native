@@ -19,7 +19,7 @@ export const CardView = styled.View`
 
 export const ImageCard = styled(SvgUri).attrs({
   width: '30%',
-  height: 'auto',
+  height: '100%',
 })`
   object-fit: contain;
   margin-right: 15px;
@@ -48,10 +48,4 @@ export const InfoText = styled.Text`
   color: #FFF;
   justify-content: flex-start;
   padding-left: 5px;
-`;
-
-export const LineBlue = styled.View`
-  border-width: 0.5px;
-  border-color: #3DACDF;
-  margin-top: 10px;
 `;

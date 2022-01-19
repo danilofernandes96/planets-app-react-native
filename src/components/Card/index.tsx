@@ -5,16 +5,16 @@ import {
   ImageCard,
   InfoText,
   InfoView,
-  LineBlue,
   TitleText,
   ViewText,
 } from './styles';
-import {IPlanet} from './types';
+import {IPlanet} from '../../store/modules/PlanetStore/Types';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {
   faRulerCombined,
   faTemperatureHigh,
 } from '@fortawesome/free-solid-svg-icons';
+import {LineBlue} from '../../global/styles';
 
 const Card: React.FC<IPlanet> = ({name, image, temperature, size}) => {
   return (
