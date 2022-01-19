@@ -8,7 +8,7 @@ import {
   TitleText,
   ViewText,
 } from './styles';
-import {IPlanet} from '../../types/types';
+import {IPlanet} from '../../store/modules/PlanetStore/Types';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {
   faRulerCombined,
