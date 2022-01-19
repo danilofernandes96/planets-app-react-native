@@ -6,3 +6,7 @@ export interface IPlanet {
   size: string,
   curiosity: string,
 }
+
+export interface IPlanetId {
+  id: string,
+}
