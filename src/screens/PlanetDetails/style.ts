@@ -1,6 +1,7 @@
 import { ImageBackground } from 'react-native';
 import { SvgUri } from 'react-native-svg';
 import styled from 'styled-components/native';
+import LottieView from 'lottie-react-native';
 
 export const Container = styled.SafeAreaView`
   flex-grow: 1;
@@ -25,11 +26,13 @@ export const Details = styled.View`
 `;
 
 export const Title = styled.Text`
+  font-family: 'Roboto-Bold';
   font-size: 30px;
   color: #FFF;
 `;
 
 export const TextBox = styled.Text`
+  font-family: 'Roboto-Regular';
   font-size: 16px;
   color: #FFF;
   margin-top: 10px;
@@ -41,6 +44,17 @@ export const ImagePlanet = styled(SvgUri).attrs({
   height: '100%',
 })`
   flex: 1;
-  justify-content: flex-end;
-  align-items: flex-end;
+`;
+
+export const ViewPlanetLoad = styled.View`
+  flex: 0.8;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const LottiePlanet = styled(LottieView).attrs({
+  lottie_speed: '2.5'
+})`
+  height: 350px;
+  width: 350px;
 `;
