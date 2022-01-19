@@ -23,13 +23,9 @@ const App: React.FC = () => {
         <Stack.Screen
           name="Home"
           component={Home}
-          options={{title: 'Início'}}
+          options={{headerShown: false}}
         />
-        <Stack.Screen
-          name="Details"
-          component={PlanetDetails}
-          options={{title: 'Planeta'}}
-        />
+        <Stack.Screen name="Details" component={PlanetDetails} />
       </Stack.Navigator>
     </NavigationContainer>
   );
